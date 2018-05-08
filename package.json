@@ -45,6 +45,9 @@
 		}
 	},
 	"scripts": {
-		"test": "grunt"
+		"test": "grunt",
+		"test:guess:by:offset": "nodeunit ./tests/zones/**/*.js -t 'guess:by:offset'",
+		"test:guess:by:abbr": "nodeunit ./tests/zones/**/*.js -t 'guess:by:abbr'",
+		"test:guess": "npm run test:guess:by:offset && npm run test:guess:by:abbr"
 	}
 }
