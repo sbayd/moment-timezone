@@ -82,7 +82,7 @@ function getGuessResult(name, mock){
  * Runs guess test, checks that guess result is equal to expectedResult
  */
 function testGuess(test, name, testSettings) {
-	const expectedResult = testSettings.expect || name;
+	var expectedResult = testSettings.expect || name;
 	if (testSettings.offset) {
 		var offsetGuess = getGuessResult(name, { offset: true });
 		test.equal(offsetGuess, expectedResult);
